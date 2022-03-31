@@ -27,7 +27,7 @@
         height: 150,
         start: ['parent', 'start'],
         end: ['parent', 'end'],
-        top: ['parent', 'top']
+        top: ['parent', 'top', 16]
       },
       username_txt: {
         top: ['pizza_pic', 'bottom', 16],
