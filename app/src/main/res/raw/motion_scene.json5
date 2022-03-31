@@ -10,7 +10,10 @@
       username_txt: {
         top: ['pizza_pic', 'top'],
         bottom: ['pizza_pic', 'bottom'],
-        start: ['pizza_pic', 'end', 16]
+        start: ['pizza_pic', 'end', 16],
+        custom: {
+          text_color: '#ff0000'
+        }
       },
       box: {
         width: 'spread',
@@ -32,7 +35,10 @@
       username_txt: {
         top: ['pizza_pic', 'bottom', 16],
         end: ['parent', 'end'],
-        start: ['parent', 'start']
+        start: ['parent', 'start'],
+        custom: {
+          text_color: '#0000ff'
+        }
       },
       box: {
         width: 'spread',
@@ -44,16 +50,19 @@
       }
     }
   },
-  Transition: {
+  Transitions: {
     default: {
       from: 'start',
       to: 'end',
       pathMotionArc: 'startHorizontal',
       KeyFrames: {
+
         KeyAttributes: [
           {
             target: ['username_txt'],
-            frames: [0,100]
+            frames: [0,50,100],
+            translationX: [0, 100, 0],
+            rotationZ: [0, 180, 360]
           }
         ]
       }
